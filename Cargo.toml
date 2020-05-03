@@ -1,0 +1,23 @@
+[package]
+name = "activator"
+version = "0.1.0"
+authors = ["Jan Kantert <jan-activator-proxy@kantert.net>"]
+license = "MIT"
+description = "A simple http activator proxy for Kubernetes."
+homepage = ""
+documentation = ""
+repository = ""
+keywords = ["http", "hyper", "kubernetes"]
+categories = ["network-programming"]
+readme = "README.md"
+edition = "2018"
+
+include = [
+  "Cargo.toml",
+  "src/**/*"
+]
+
+[dependencies]
+hyper-reverse-proxy = { git = "https://github.com/jabdoa2/hyper-reverse-proxy" }
+hyper = "0.13"
+tokio = { version = "0.2", features = ["full"] }
